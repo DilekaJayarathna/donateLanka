@@ -70,7 +70,7 @@ router.post("/login",(req,res)=>{
     })
 });
 
-router.post('/profile', passport.authenticate('jwt', {session:false}),function(req,res){
+router.get('/profile', passport.authenticate('jwt', {session:false}),function(req,res){
     //console.log('gfsjdh');
     res.json({user:req.user});
 });
